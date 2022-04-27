@@ -36,6 +36,21 @@ class LinkedList:
     def remove_At(self,index):
         if index <0 or index>=self.get_length():
             raise Exception("invalid index")
+        if index== 0:
+            self.heaf =self.head.next
+            return
+        count =0
+        itr=self.head
+        while itr:
+            count +=1
+            if count == index-1:
+                itr.next=itr.next.next
+                break
+
+            itr=itr.next
+    def insert_At(self,index,data):
+        if index <0 or index>=self.get_length():
+            raise Exception("invalid index")
 
 
 
