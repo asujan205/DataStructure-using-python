@@ -6,10 +6,10 @@ class HashTable:
         self.arr = [ None for i in range(self.MAX)]
 
     def get_hash_key(self,key):
-            h=0 
+        h=0 
         for char in key:
-        h+=ord(char)
-         return h %self.MAX
+            h+=ord(char)
+        return h %self.MAX
     def __setitem__(self,key,value):
         h= self.get_hash_key(key)
         self.arr[h]=value
