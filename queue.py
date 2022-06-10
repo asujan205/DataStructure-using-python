@@ -1,8 +1,8 @@
-data_queue=[]
-data_queue.insert(0,"sujan")
-data_queue.insert(0,"santosh")
+# data_queue=[]
+# data_queue.insert(0,"sujan")
+# data_queue.insert(0,"santosh")
 
-print(data_queue.pop())
+# print(data_queue.pop())
 from collections import deque
 
 class Queue:
@@ -21,3 +21,7 @@ class Queue:
     
     def size(self):
         return len(self.buffer)
+pd=Queue()
+pd.enqueue("sujan")
+pd.enqueue("Santosh")
+pd.dequeue()
