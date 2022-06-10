@@ -1,24 +1,23 @@
+data_queue=[]
+data_queue.insert(0,"sujan")
+data_queue.insert(0,"santosh")
+
+print(data_queue.pop())
 from collections import deque
-class Stack:
+
+class Queue:
+    
     def __init__(self):
-        self.container = deque()
+        self.buffer = deque()
     
-    def push(self,val):
-        self.container.append(val)
+    def enqueue(self, val):
+        self.buffer.appendleft(val)
         
-    def pop(self):
-        return self.container.pop()
-    
-    def peek(self):
-        return  self.container[-1]
+    def dequeue(self):
+        return self.buffer.pop()
     
     def is_empty(self):
-        return len(self.container)==0
+        return len(self.buffer)==0
     
     def size(self):
-        return len(self.container)
-obj1=Stack()
-obj1.push("sujan")
-obj1.push("niraml")
-obj1.push("santosh")
-obj1.pop()
+        return len(self.buffer)
